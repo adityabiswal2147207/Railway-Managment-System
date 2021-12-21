@@ -56,11 +56,51 @@
             background: rgb(223, 90, 42);
         }
         .container{
-            background-color: black;
-            height: 200px;
-            opacity: 20%;
+            display: flex;
+            height: 130px;
             border-radius: 20px;
             margin-top: 200px;
+            padding: 10px;
+        }
+        .container .items{
+            display: flex;
+            padding: 15px;
+            margin-left: 2px;
+            background-color: blanchedalmond;
+            border-radius: 50px;
+            height: 90px;
+        }
+        .container .items ul{
+            display: flex;
+            color: black;
+            padding: 5px;
+            text-decoration: none;
+            list-style: none;
+        }
+        .container .items ul li{
+            display: flex;
+            text-decoration: none;
+            list-style: none;
+            padding-left: 6px;
+        }
+        .container .items ul li a{
+            display: flex;
+            text-decoration: none;
+            list-style: none;
+            margin-left: 30px;
+            font-size: 3vh;
+            font-weight: bold;
+            margin-top: -30px;
+            padding: 50px;
+            color: black;
+        }
+        .container .items:hover{
+            background-color: orangered;
+        }
+        .container .items ul li a:hover{
+            color:whitesmoke;
+            font-size: 4vh;
+            margin-top: -50px;
         }
         
     </style>
@@ -73,11 +113,35 @@
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact us</a></li>
             <li><a href="#">Packages</a></li>
-            <li class="login"><a href="#">Login/Register</a></li>
+            <li class="login"><a href="registration.html">Login/Register</a></li>
         </ul>
     </div>
     <div class="container">
-
+        <div class="items">
+            <ul>
+                <li><a href="#">Hotels</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="#">Flights</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="#">Holiday Packages</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="#">Tourist Trains</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="#">Hill Railways</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
