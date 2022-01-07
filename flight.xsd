@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="flight.xsl"?>
+<Travel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="Tourism.xsd">
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Travel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Train" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:short" name="TrainNo"/>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="xs:string" name="source"/>
+              <xs:element type="xs:string" name="destination"/>
+              <xs:element type="xs:short" name="fare"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="packages">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="charge"/>
+              <xs:element type="xs:string" name="destination"/>
+              <xs:element type="xs:string" name="Duration"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
