@@ -1,0 +1,37 @@
+{
+    "Train": [
+       {
+          "TrainNo": "1234",
+          "Name": "Rajdhani",
+          "source": "BLR",
+          "destination": "AMD",
+          "fare": "4900"
+       },
+       {
+          "TrainNo": "09110",
+          "Name": "Vivek Exp.",
+          "source": "BLR",
+          "destination": "BRC",
+          "fare": "400"
+       },
+       {
+          "TrainNo": "0810",
+          "Name": "Maharaja Exp.",
+          "source": "MMCT",
+          "destination": "HNZ",
+          "fare": "2000"
+       },
+       {
+          "TrainNo": "09110",
+          "Name": "Tejas Exp.",
+          "source": "BLR",
+          "destination": "BRC",
+          "fare": "1000"
+       }
+    ],
+    "packages": {
+       "charge": [],
+       "destination": [],
+       "Duration": []
+    }
+ }
