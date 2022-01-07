@@ -4,214 +4,113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Holiday Planning and Tourism</title>
     <style>
         *{
-            padding: 0;
             margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
         body{
             background-color: white;
         }
-        .navbar{
-            display: flex;
-            width: 100%;
+        header{
             background-color: black;
-            height: 100px;
+            height: 60px;
+            display: flexbox;
+            z-index: 0;
         }
-        .navbar ul{
+        header .navbar{
+            display: flexbox;
+        }
+        header .navbar ul{
             display: flex;
-            text-decoration: none;
+        }
+        header .navbar ul li{
+            display: flex;
             list-style: none;
         }
-        .navbar ul li{
-            display: flex;
+        header .navbar ul li a{
             text-decoration: none;
-            list-style-type: none;
-            flex-wrap: wrap;
-        }
-        .navbar ul li a{
-            display: flex;
-            padding: 40px;
-            font-size: 2.4vh;
-            text-decoration: none;
+            list-style: none;
             color: white;
+            padding: 20px;
         }
-        .navbar ul li a:hover{
+        header .navbar ul li a:hover{
             background-color: white;
             color: black;
-            border: 1px solid black;
+            border-radius: 20px;
         }
-        .navbar .login a{
-            margin-left: 450px;
+        #login{
+            margin-left: 750px;
+            background-color: violet;
+            color: black;
+        }
+        #login:hover{
             background-color: white;
-            color: black;
-            border-bottom-right-radius: 50px;
-            border-bottom-left-radius: 50px;
-            text-decoration: underline;
+            border-radius: 20px;
         }
-        .container{
-            width: 500px;
-            height: 670px;
-            background: whitesmoke;
-            display: flexbox;
-            padding: 25px 30px;
-            border-radius: 5px;
+        .container img{
+            width: 1440px;
+            height: 600px;
         }
-        .container .title{
-            font-size: 35px;
-            font-weight: 500;
-            position: relative;
-            text-decoration: underline;
-        }
-        .container .title::before{
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 3px;
-            width: 30px;
-        }
-        .container .entries .input-box{
-            padding: 10px;
-            display: flexbox;
-        }
-        .container .entries .input-box input{
-            display: flexbox;
-            height: 50px;
-            width: 400px;
-        }
-        .container .entries .input-box label{
-            font-size: 3vh;
-        }
-        .container .checkers{
-            padding: 4px;
-            display: flexbox;
-            font-size: 2.9vh;
-        }
-        .container .checkers .checks{
-            display: flexbox;
-            padding: 10px;
-            flex-wrap: wrap;
-        }
-        .container .submit-button button{
-            width: 150px;
-            height: 50px;
-            border-radius: 40px;
-            margin-left: 100px;
-            margin-top: 40px;
-            background: black;
-            color: whitesmoke;
-            font-size: 2vh;
-        }
-        .container .submit-button button:hover{
-            background: whitesmoke;
-            color: black;
-            cursor: pointer;
-        }
-        .container-2{
-            display: flexbox;
+        .container p{
+            font-size: 7vh;
+            color: white;
+            margin-top: -350px;
+            margin-left: 30px;
         }
         .container-2 h2{
-            margin-top: -600px;
-            margin-left: 750px;
-            font-size: 4vh;
-            text-decoration: underline;
+            margin-top: 350px;
+            text-align: center;
+            font-family: 'Lobster', cursive;
+            font-size: 7vh;
         }
-        .container-3{
+        .container-2 .cont img{
             display: flexbox;
-            padding: 40px;
-            margin-left: 650px;
-        }
-        footer{
-            display: flex;
-            margin-top: 170px;
-            background-color: black;
-            height: 43px;
-            position: static;
-            text-align: center;
-        }
-        footer h4{
-            color: white;
-            align-items: center;
-            text-align: center;
-            margin-left: 600px;
+            flex-wrap: wrap;
+            height: 400px;
+            width: 400px;
+            margin-top: 20px;
+            padding: 30px;
+            margin-left: 50px;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="#">Special Trains</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Packages</a></li>
-            <li><a href="#">Hotels</a></li>
-            <li class="login"><a href="Login.html">LOGIN</a></li>
-        </ul>
-    </div>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="Packages.html">Packages</a></li>
+                <li><a href="#">Special Trains</a></li>
+                <li><a href="#">Services</a></li>
+                <li id="login"><a href="Login.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
     <div class="container">
-        <div class="title">Book Holidays</div>
-        <form action="#">
-            <div class="entries">
-                <div class="input-box">
-                    <input type="text" placeholder="From" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="To" required>
-                </div>
-                <div class="input-box">
-                    <input type="date" name="date" id="date">
-                </div>
-                <div class="input-box">
-                    <label for="Classes">Choose a class:</label>
-                    <select name="Classes" id="Classes">
-                        <option value="All Classes">All Classes</option>
-                        <option value="Anubhuti class">Anubhuti class</option>
-                        <option value="AC first class">AC first class</option>
-                        <option value="Exec chair car">Exec. chair car</option>
-                        <option value="AC two tier">AC two tier</option>
-                        <option value="First class">First class</option>
-                        <option value="AC three tier">Ac three tier</option>
-                        <option value="AC 3 economy">AC 3 economy</option>
-                        <option value="AC chair car">AC chair car</option>
-                        <option value="Sleeper">Sleeper</option>
-                        <option value="Second Sitting">Second Sitting</option>
-                    </select>
-                </div>
-            </div>
-            <div class="checkers">
-                <div class="checks">
-                    <label for="Divyaang Concessions">Divyaang Concessions</label>
-                    <input type="checkbox" name="Divyaang Consessions" id="Divyaang Consessions">
-                </div>
-                <div class="checks">
-                    <label for="Flexible with date">Flexible with date</label>
-                    <input type="checkbox" name="Flexible with date" id="Flexible with date">
-                </div>
-                <div class="checks">
-                    <label for="Train with available berth">Train with available birth</label>
-                    <input type="checkbox" name="Train with available birth" id="Train with available birth">
-                </div>
-                <div class="checks">
-                    <label for="Railway pass concessions">Railway Pass Consessions</label>
-                    <input type="checkbox" name="Railway pass consessions" id="Railway pass consessions">
-                </div>
-            </div>
-            <div class="submit-button">
-                <button>submit</button>
-            </div>
-        </form>
+        <img src="ankush-minda-7KKQG0eB_TI-unsplash.jpg" alt="train image">
+        <p>Plan Your Vacation With Us...</p> 
     </div>
     <div class="container-2">
-        <h2>Railway Tourism and Holidays</h2>
+        <h2>Our top locations</h2>
+        <div class="cont">
+            <img src="jack-ward-rknrvCrfS1k-unsplash.jpg" alt="Jaipur">
+            <img src="kris-guico-rsB-he-ye7w-unsplash.jpg" alt="Goa">
+            <img src="luca-bravo-O453M2Liufs-unsplash.jpg" alt="Ladakh">
+            <img src="rolands-varsbergs-miKmVyq3qhE-unsplash.jpg" alt="Kerala">
+            <img src="satyaprakash-kumawat-ky1d-IWCBis-unsplash.jpg" alt="Bangalore">
+            <img src="suchismita-sahoo-aEO1tuMpqb8-unsplash.jpg" alt="Odisha">
+            <img src="thebugadi-HsvegYJYLjY-unsplash.jpg" alt="Amarnath">
+            <img src="surya-teja-oIXJ839p55k-unsplash.jpg" alt="Manali">
+            <img src="naman-pandey-y3nWJ-QznP4-unsplash.jpg" alt="Shimla">
+        </div>
     </div>
-    <div class="container-3">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1NtdmNVNosA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
     </div>
-    <footer>
-        <h4>Copyright. All rights reserved</h4>
-    </footer>
 </body>
 </html>
