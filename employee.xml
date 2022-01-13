@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="employee.xsl"?>
-<company>
-    <employee>
+<company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="employee.xsd">
+    <employee id="101">
         <id>101</id>
         <name>Krishna Bansal</name>
         <age>21</age>
@@ -11,8 +12,8 @@
         <designation>Tester</designation>
         <promotion>Developer</promotion>
     </employee>
-    <employee>
-        <id>101</id>
+    <employee id="102">
+        <id>102</id>
         <name>Gyan Gartia</name>
         <age>20</age>
         <salary>55000</salary>
@@ -21,7 +22,7 @@
         <designation>Tester</designation>
         <promotion>Developer</promotion>
     </employee>
-    <employee>
+    <employee id="103">
         <id>103</id>
         <name>Pankaj Sharma</name>
         <age>25</age>
@@ -31,7 +32,7 @@
         <designation>Junior Developer</designation>
         <promotion>Developer</promotion>
     </employee>
-    <employee>
+    <employee id="104">
         <id>104</id>
         <name>Prabhu Sir</name>
         <age>42</age>
@@ -39,6 +40,36 @@
         <email>prabhu@mca.christuniversity.in</email>
         <mobile>7777777777</mobile>
         <designation>Developer</designation>
+        <promotion>Team Leader</promotion>
+    </employee>
+    <employee id="105">
+        <id>105</id>
+        <name>Manjunath sir</name>
+        <age>44</age>
+        <salary>70000</salary>
+        <email>manjunath@mca.christuniversity.in</email>
+        <mobile>8888888888</mobile>
+        <designation>Developer</designation>
+        <promotion>Team Leader</promotion>
+    </employee>
+    <employee id="106">
+        <id>106</id>
+        <name>JP sir</name>
+        <age>55</age>
+        <salary>200000</salary>
+        <email>jp@mca.christuniversity.in</email>
+        <mobile>9999999999</mobile>
+        <designation>Team Leader</designation>
+        <promotion>Associate Project Manager</promotion>
+    </employee>
+    <employee id="107">
+        <id>107</id>
+        <name>Akshay Singhal</name>
+        <age>43</age>
+        <salary>150000</salary>
+        <email>akshay.singhal@mca.christuniversity.in</email>
+        <mobile>2222222222</mobile>
+        <designation>Developer assistant</designation>
         <promotion>Team Leader</promotion>
     </employee>
 </company>
