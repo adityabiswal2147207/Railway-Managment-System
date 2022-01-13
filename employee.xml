@@ -72,4 +72,34 @@ xsi:noNamespaceSchemaLocation="employee.xsd">
         <designation>Developer assistant</designation>
         <promotion>Team Leader</promotion>
     </employee>
+    <employee id="108">
+        <id>108</id>
+        <name>Aditya Biswal</name>
+        <age>24</age>
+        <salary>70000</salary>
+        <email>aditya.biswal@mca.christuniversity.in</email>
+        <mobile>7038131072</mobile>
+        <designation>Tester</designation>
+        <promotion>Developer</promotion>
+    </employee>
+    <employee id ="109">
+        <id>109</id>
+        <name>Jeetank Naidu</name>
+        <age>22</age>
+        <salary>60000</salary>
+        <email>jeetank.naidu@mca.christunivesity.in</email>
+        <mobile>666666666</mobile>
+        <designation>Tester</designation>
+        <promotion>Developer</promotion>
+    </employee>
+    <employee id = "110">
+        <id>110</id>
+        <name>Priyanka Yadav</name>
+        <age>24</age>
+        <salary>70000</salary>
+        <email>priyanka.yadav@mca.christuniversity.in</email>
+        <mobile>6565656565</mobile>
+        <designation>Tester</designation>
+        <promotion>Developer</promotion>
+    </employee>
 </company>
