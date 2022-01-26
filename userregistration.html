@@ -1,110 +1,69 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Registration</title>
-        <link rel="stylesheet" href="contact.css">
-        <style>
-                            *{
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
+
+        body {
             background-color: white;
         }
-        header{
+
+        header {
             background-color: black;
             height: 60px;
             display: flexbox;
             z-index: 0;
         }
-        header .navbar{
+
+        header .navbar {
             display: flexbox;
         }
-        header .navbar ul{
+
+        header .navbar ul {
             display: flex;
         }
-        header .navbar ul li{
+
+        header .navbar ul li {
             display: flex;
             list-style: none;
         }
-        header .navbar ul li a{
+
+        header .navbar ul li a {
             text-decoration: none;
             list-style: none;
             color: white;
             padding: 20px;
         }
-        header .navbar ul li a:hover{
+
+        header .navbar ul li a:hover {
             background-color: white;
             color: black;
             border-radius: 20px;
         }
-        #login{
-            margin-left: 750px;
-            background-color: violet;
-            color: black;
-        }
-        #login:hover{
-            background-color: white;
-            border-radius: 20px;
-        }
-        .container{
-            padding: 70px;
-            margin: 40px;
-        }
-        .modal{
-            padding: 50px;
-            background-color: black;
-            color: white;
-            border-radius: 30px;
-            height: 900px;
-        }
-        .modal-body h3{
-            font-size: 10vh;
-            color: black;
-            text-decoration: underline;
-            text-align: center;
-            background-color: white;
-            border-radius: 30px;
-        }
-        .row{
-            padding: 90px;
-        }
-        .row label{
-            font-size: 4vh;
-            margin-left: 30px;
-        }
-        .row input{
-            width: 100%;
-            padding: 12px 20px;
-            border: 1px solid orange;
-            margin: 14px;
-            border-radius: 5px;
-            font-size: 15px;
-        }
-        .row button{
-            width: 150px;
-            height: 70px;
-            border-radius: 20px;
-            background-color: black;
-            color: white;
-            margin-left: 320px;
-            margin-top: -0px;
-        }
-        #btn1{
-            margin-top: -120px;
-        }
-        #btn2{
-            margin-top: -40px;
-        }
-        .row button:hover{
-            cursor: pointer;
-            background-color: orange;
-        }
-        </style>
-       
-    </head>
+        
+    </style>
+</head>
+
 <body>
     <header>
         <div class="navbar">
@@ -113,157 +72,103 @@
                 <li><a href="packages2.html">Packages</a></li>
                 <li><a href="#">Special Trains</a></li>
                 <li><a href="#">Services</a></li>
-                <li id="login"><a href="Login.html">Login</a></li>
             </ul>
         </div>
     </header>
-</div>
-<div class="container">
-  <form id="contact" action="" method="post">
-    <div class="modal" id="login-modal" tabindex="-1">
-      <div class="modal-dialog">
-          <div class="modal-content">
+    <h1 class="text-center bg-dark text-white">Register Yourself With Railways</h1>
+    <div class="container">
+        <form onclick="return validation()">
+            <br>
+            <br>
+            <div class="form-group">
+                <label>Username:</label>
+                <input type="text" name="" id="username" class="form-control">
+                <span id="usererror" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="text" name="" id="password" class="form-control">
+                <span id="passworderror" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password:</label>
+                <input type="text" name="" id="cpassword" class="form-control">
+                <span id="cpassworderror" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="" id="email" class="form-control">
+                <span id="emailerror" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label>Mobile Number:</label>
+                <input type="text" name="" id="number" class="form-control">
+                <span id="mobileerror" class="text-danger font-weight-bold"></span>
+            </div>
+            <input type="submit" name="" class="btn btn-primary">
 
-              <div class="modal-body">
-                  <h3 class="modal-title">Sign Up</h3>
-
-                  <form action="/#">
-                      <div class="row">
-                          <div class="col">
-                              <label for="fname">First Name</label>
-                              <div class="input-group mb-2">
-                                  <input type="text" class="form-control" id="fname" oninput="alphaOnly(this)">
-                              </div>
-                          </div>
+        </form>
+    </div>
 
 
-                          <div class="col">
-                              <label for="lname">Last Name</label>
-                              <div class="input-group mb-2">
-                                  <input type="text" class="form-control" id="lname">
-                              </div>
-                          </div>
-                      <label for="dob">Date of Birth</label>
-                      <div class="input-group mb-2">
-                          <input type="text" class="form-control" id="dob" placeholder="09/03/1999">
-                      </div>
-                      <label for="email">Email</label>
-                      <div class="input-group mb-2">
-                          <input type="text" class="form-control" id="email">
-                      </div>
 
-                      <label for="mobile">Mobile</label>
-                      <div class="input-group mb-2">
-                          <div class="input-group-prepend">
-                              <span class="input-group-text"></span>
-                          </div>
-                          <input type="text" class="form-control" id="mobile">
-                      </div>
-                      <label for="password">Password</label>
-                      <div class="input-group mb-2">
-                          <input type="password" class="form-control" id="password">
-                      </div>
-                      </div>
-                  </form>
+    <script type="text/javascript">
+        function validation() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var cpassword = document.getElementById('cpassword').value;
+            var email = document.getElementById('email').value;
+            var number = document.getElementById('number').value;
 
-                  <div class="row m-0 p-0 justify-content-end">
-                      <button type="button" class="btn btn-secondary m-1" data-dismiss="modal" id="btn1">Skip</button>
-                      <button type="button" class="btn btn-success m-1"
-                          onclick="javascript:signUpProcess()" id="btn2">Proceed</button>
-                  </div>
-              </div>
 
-          </div>
-      </div>
-  </div>
-  <script>
+            var usercheck = /^[A-Za-z.]{3,30}$/;
+            var passwordcheck = /^(?=.[0-9])(?=.*[!@#$%^&*])[a-zA-z0-9!@#$%^&*]{8,16}$/;
+            var emailcheck = /^[A-Za-z_]{3,}@[A-Za-z]{3,}.{1}[A-Za-z.]{2,6}$/;
+            var mobilecheck = /^[789][0-9]{9}$/;
 
-      var fname = document.getElementById('fname')
-      var lname = document.getElementById('lname')
-      var dob = document.getElementById('dob')
-      var email = document.getElementById('email')
-      var mobile = document.getElementById('mobile')
-      var ref = document.getElementById('refC')
-      var pass = document.getElementById('password')
+            if (usercheck.test(username)) {
+                document.getElementById('usererror').innerHTML = " ";
+            }
+            else {
+                document.getElementById('usererror').innerHTML = "** username is invalid";
+                return false;
+            }
 
-      mobile.oninput = function () {
-          if(mobile.value.length>10) mobile.value=mobile.value.slice(0,10)
-          var regex = /[^0-9]/gi;
-          mobile.value = mobile.value.replace(regex, "");
-      }
+            if (passwordcheck.test(password)) {
+                document.getElementById('passworderror').innerHTML = " ";
+            }
+            else {
+                document.getElementById('passworderror').innerHTML = "** Your password is invalid";
+                return false;
+            }
 
-      fname.oninput=lname.oninput= function () {
-          var regex = /[^a-z]/gi;
-          fname.value = fname.value.replace(regex, "");
-          lname.value = lname.value.replace(regex, "");
-      }
-      
-      function signUpProcess() {
-          var fname = document.getElementById('fname')
-          var lname = document.getElementById('lname')
-          var dob = document.getElementById('dob')
-          var email = document.getElementById('email')
-          var mobile = document.getElementById('mobile')
-          var ref = document.getElementById('refC')
-          var pass = document.getElementById('password')
-          //validate
-          if (
-              !fname ||
-              !lname ||
-              !dob ||
-              !email ||
-              !mobile ||
-              !pass
-          ) {
-              alert("All Fields are mandatory except \"Referal\"")
-              return
-          }
+            if (cpassword.match(password)) {
+                document.getElementById('cpassworderror').innerHTML = " ";
+            }
+            else {
+                document.getElementById('cpassworderror').innerHTML = "** Your password is not matching, confirm again!";
+                return false;
+            }
 
-          var passReg = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[~`!@#$%^_+={}|:"<>,.?])[A-Za-z\d@$!%*?&]{8,}$/
-          if (!passReg.test(pass.value)) {
-              alert("Password must contain atleast 1 Upper Case, 1 Lower Case, 1 Digit, 1 Special Character and It should be minimum 8 characters.")
-              return
-          }
-          var refReg = /^DM(?=.*[A-Z]){8,10}$/
-          if (ref.value && !refReg.test(ref.value)) {
-              alert("Invalid Referal Code")
-              return
-          }
-          var mobReg = /[0-9]{10,10}/
-          if (!mobReg.test(mobile.value)) {
-              alert("Invalid Mobile Number")
-              return
-          }
-          var emailReg = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/
-          if (!emailReg.test(email.value)) {
-              alert("Invalid Email")
-              return
-          }
-          var dateReg = /^(0[1-9]|1[0-9]|2[0-9]|3[0-1])(\/)(0[1-9]|1[0-2])(\/)(19[0-9]{2}|20[0-2]{1}[0-9]{1})$/gm
-          if (!dateReg.test(dob.value)) {
-              alert("Invalid Date of Birth")
-              return
-          }
-          var nameReg = /([a-z]*)/gi
-          if (!nameReg.test(fname.value)) {
-              alert("Name cannot contain numbers")
-              return
-          }
-          if (!nameReg.test(lname.value)) {
-              alert("Name cannot contain numbers")
-              return
-          }
-          alert("Registered Successfully")
-      }
-  </script>
-  <script>
-      document.getElementById("section-1").onwheel = function (event) {
-          if (event.deltaY >= 0) {
-              document.getElementById("header").style.display = "none";
-          } else {
-              document.getElementById("header").style.display = "flex";
-          }
-      };
-  </script>
+            if (emailcheck.test(email)) {
+                document.getElementById('emailerror').innerHTML = " ";
+            }
+            else {
+                document.getElementById('emailerror').innerHTML = "** You have entered an invalid email id";
+                return false;
+            }
+
+            if (mobilecheck.test(number)) {
+                document.getElementById('mobileerror').innerHTML = " ";
+            }
+            else {
+                document.getElementById('mobileerror').innerHTML = "** You have entered a invalid mobile number";
+                return false;
+            }
+        }
+
+    </script>
+
 </body>
+
 </html>
