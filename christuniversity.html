@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Christ University</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+
+        header {
+            background-color: white;
+            height: 60px;
+            width: 100%;
+            display: flexbox;
+            z-index: 0;
+        }
+
+        header .navbar {
+            display: flexbox;
+        }
+
+        header .navbar ul {
+            display: flex;
+        }
+
+        header .navbar ul li {
+            display: flex;
+            list-style: none;
+        }
+
+        header .navbar ul li a {
+            text-decoration: none;
+            list-style: none;
+            color: black;
+            padding: 20px;
+        }
+
+        header .navbar ul li a:hover {
+            background-color: orange;
+            color: black;
+            border-radius: 20px;
+        }
+        section{
+            display: flex;
+            width: 500px;
+            height: 1120px;
+            background: white;
+            margin-top: 100px;
+            margin-left: -980px;
+            border-right-color: cadetblue;
+            border: 2px solid black;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        form{
+            padding: 5px;
+        }
+        .form-group{
+            padding: 10px;
+        }
+        label{
+            font-size: 2vh;
+        }
+        input{
+            height: 50px;
+            width: 450px;
+            border-color: black;
+            border-radius: 20px;
+        }
+        span{
+            display: block;
+            color: red;
+            font-style: italic;
+        }
+        #comments{
+            height: 90px;
+        }
+        #submit{
+            background-color: greenyellow;
+        }
+        #reset{
+            background-color: orange;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Lobster', cursive;
+            text-decoration: underline;
+
+        }
+        label{
+            font-size: 2vh;
+        }
+     
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <h1>CHRIST DEEMED TO BE UNIVERSITY</h1>
+    </header>
+    <section>
+        <form action="">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <br>
+                <input type="text" id="name" placeholder="Enter Your Full Name">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" id="email" placeholder="Enter Your email id here">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="reg_no">Register Number:</label>
+                <br>
+                <input type="number" id="reg_no" placeholder="Enter your university reg no">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <br>
+                <input type="password" id="password" placeholder="Enter your password here">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <br>
+                <input type="text" id="address" placeholder="Enter your address">
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <br>
+                <input type="text" id="comments" placeholder="Enter comment if any">
+            </div>
+            <div class="form-group">
+                <label for="likes">What you like most about campus:</label>
+                <br>
+                <select name="likes" id="likes">
+                    <option value="student">student</option>
+                    <option value="campus">campus</option>
+                    <option value="atmosphere">atmosphere</option>
+                    <option value="dorm">dorm room</option>
+                    <option value="sports">sports</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="interests">How did you become interested in this university:</label>
+                <br>
+                Friends: <input type="radio" name="radio" id="friends">
+                Television: <input type="radio" name="radio" id="television">
+                Internet: <input type="radio" name="radio" id="internet">
+                Others: <input type="radio" name="radio" id="others">
+            </div>
+            <div class="form-group">
+                <input type="submit" id="submit">
+                <br>
+                <br>
+                <input type="reset" id="reset">
+            </div>
+
+
+        </form>
+    </section>
+
+</body>
+
+</html>
+<script>
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var number = document.getElementById('reg_no');
+    var span = document.getElementsByTagName('span');
+    var password = document.getElementById('password');
+
+    email.onkeydown = function()
+    {
+        const regex1 = /^([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{1,8})$/; 
+        if(regex1.test(email.value))
+        {
+            span[1].innerText = "Your email is valid";
+            span[1].style.color = "green";
+        }
+        else{
+            span[1].innerText = "Your email is invalid";
+            span[1].style.color = "red";
+        }
+    }
+    number.onkeydown = function()
+    {
+        const regex2 = /^[0-9]{6}$/;
+        if(regex2.test(number.value))
+        {
+            span[2].innerText = "Your register number is valid";
+            span[2].style.color = "green";
+        }
+        else{
+            span[2].innerText = "Your register number is invalid";
+            span[2].style.color = "red";
+        }
+    }
+    name.onkeydown = function()
+    {
+        const regex3 = /^[a-zA-Z]{1,}$/;
+        if(regex3.test(name.value))
+        {
+            span[0].innerText = "Your name is valid";
+            span[0].style.color = "green";
+        }
+        else{
+            span[0].innerText = "Your name is invalid";
+            span[0].style.color = "red";
+        }
+    }
+    password.onkeydown = function()
+    {
+        const regex4 = /^(?=.[0-9])(?=.*[!@#$%^&*])[a-zA-z0-9!@#$%^&*]{8,16}$/;
+        if(regex4.test(email.value))
+        {
+            span[3].innerText = "Your password is a valid one";
+            span[3].style.color = "green";
+        }
+        else{
+            span[3].innerText = "Your password is invalid";
+            span[3].style.color = "red";
+        }
+    }
+
+</script>
