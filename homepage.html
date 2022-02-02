@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,67 +10,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>Holiday Planning and Tourism</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
+
+        body {
             background-color: white;
         }
-        header{
+
+        header {
             background-color: black;
             height: 60px;
             display: flexbox;
             z-index: 0;
         }
-        header .navbar{
+
+        header .navbar {
             display: flexbox;
         }
-        header .navbar ul{
+
+        header .navbar ul {
             display: flex;
         }
-        header .navbar ul li{
+
+        header .navbar ul li {
             display: flex;
             list-style: none;
         }
-        header .navbar ul li a{
+
+        header .navbar ul li a {
             text-decoration: none;
             list-style: none;
             color: white;
             padding: 20px;
         }
-        header .navbar ul li a:hover{
+
+        header .navbar ul li a:hover {
             background-color: white;
             color: black;
             border-radius: 20px;
         }
-        #login{
+
+        #login {
             margin-left: 750px;
             background-color: violet;
             color: black;
         }
-        #login:hover{
+
+        #login:hover {
             background-color: white;
             border-radius: 20px;
         }
-        .container img{
+
+        .container img {
             width: 1440px;
             height: 600px;
         }
-        .container p{
+
+        .container p {
             font-size: 7vh;
             color: white;
             margin-top: -350px;
             margin-left: 30px;
         }
-        .container-2 h2{
+
+        .container-2 h2 {
             margin-top: 350px;
             text-align: center;
             font-family: 'Lobster', cursive;
             font-size: 7vh;
         }
-        .container-2 .cont img{
+
+        .container-2 .cont img {
             display: flexbox;
             flex-wrap: wrap;
             height: 400px;
@@ -78,7 +92,8 @@
             padding: 30px;
             margin-left: 50px;
         }
-        .container-2 .names{
+
+        .container-2 .names {
             display: flexbox;
             flex-wrap: wrap;
             align-items: center;
@@ -87,16 +102,19 @@
             border-top-right-radius: 30px;
             border-bottom-left-radius: 30px;
         }
-        .container-2 .names ul{
+
+        .container-2 .names ul {
             display: flex;
             padding: 20px;
             align-items: center;
         }
-        .container-2 .names ul li{
+
+        .container-2 .names ul li {
             display: flex;
             align-items: center;
         }
-        .container-2 .names ul li a{
+
+        .container-2 .names ul li a {
             text-decoration: none;
             list-style: none;
             padding: 30px;
@@ -105,27 +123,31 @@
             margin-left: 20px;
             color: orange;
         }
-        .container-2 .names ul li a:hover{
+
+        .container-2 .names ul li a:hover {
             background-color: orange;
             color: white;
         }
-        .cont-vid{
+
+        .cont-vid {
             display: flexbox;
             padding: 30px;
             margin-left: 100px;
         }
-        .cont-vid iframe{
+
+        .cont-vid iframe {
             padding: 30px;
         }
     </style>
 </head>
+
 <body onload="checkCookie()">
     <header>
         <div class="navbar">
             <ul>
                 <li><a href="homepage.html">Home</a></li>
                 <li><a href="packages2.html">Packages</a></li>
-                <li><a href="#">Special Trains</a></li>
+                <li><a href="lab8.html">Special Hotels</a></li>
                 <li><a href="#">Services</a></li>
                 <li id="login"><a href="userregistration.html">Register</a></li>
             </ul>
@@ -133,7 +155,7 @@
     </header>
     <div class="container">
         <img src="ankush-minda-7KKQG0eB_TI-unsplash.jpg" alt="train image">
-        <p>Plan Your Vacation With Us...</p> 
+        <p>Plan Your Vacation With Us...</p>
     </div>
     <div class="container-2">
         <h2>Our top locations</h2>
@@ -152,63 +174,92 @@
             <ul>
                 <li><a href="https://www.tourism.rajasthan.gov.in/jaipur.html">Jaipur</a></li>
                 <li><a href="https://goa-tourism.com/">Goa</a></li>
-                <li><a href="https://www.tripadvisor.in/Tourism-g297624-Ladakh_Jammu_and_Kashmir-Vacations.html">Ladakh</a></li>
+                <li><a
+                        href="https://www.tripadvisor.in/Tourism-g297624-Ladakh_Jammu_and_Kashmir-Vacations.html">Ladakh</a>
+                </li>
                 <li><a href="https://www.keralatourism.org/">Kerala</a></li>
                 <li><a href="https://www.britannica.com/place/Bangalore-India">Bangalore</a></li>
                 <li><a href="https://ecoretreat.odishatourism.gov.in/en.html?url=ecoretreat">Odisha</a></li>
                 <li><a href="http://www.shriamarnathjishrine.com/">Amarnath</a></li>
                 <li><a href="https://www.tourism-of-india.com/manali/">Manali</a></li>
-                <li><a href="https://www.tripadvisor.in/Tourism-g304552-Shimla_Shimla_District_Himachal_Pradesh-Vacations.html">Shimla</a></li>
+                <li><a
+                        href="https://www.tripadvisor.in/Tourism-g304552-Shimla_Shimla_District_Himachal_Pradesh-Vacations.html">Shimla</a>
+                </li>
             </ul>
         </div>
     </div>
     <div class="cont-vid">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/QkBMI5m64uY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/jYLXQWVpDYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vydEu1I9r5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/AkC90RMaQYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VEPZkPhRwmQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ecGI4wBE1HY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZKHrvTO32M0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FxXXHglhCTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QkBMI5m64uY" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jYLXQWVpDYk" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vydEu1I9r5c" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AkC90RMaQYs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VEPZkPhRwmQ" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ecGI4wBE1HY" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZKHrvTO32M0" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FxXXHglhCTQ" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
     </div>
 
 
     <script>
-      function setCookie(cname,cvalue,exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
 
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
 
-function checkCookie() {
-  let user = getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
-  } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
-     }
-  }
-}
+        function checkCookie() {
+            let user = getCookie("username");
+            if (user != "") {
+                alert("Welcome again " + user);
+            } else {
+                user = prompt("Please enter your good name:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 30);
+                }
+            }
+        }
     </script>
 </body>
+
 </html>
