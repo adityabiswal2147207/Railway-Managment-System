@@ -11,16 +11,42 @@
 </head>
 <body ng-app="Packages">
     <div ng-controller="Packagesctrl">
+        <header>
+            <div class="navbar">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="packages2.html">Packages</a></li>
+                    <li><a href="lab8.html">Special Hotels</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li id="login"><a href="userregistration.html">Register</a></li>
+                </ul>
+            </div>
+        </header>
         Rows to display:<input type="number" step="1" min="0" max="7" ng-model="rowlimit"/><br><br>
         Search:<input type="text" placeholder="Search for hotels" ng-model="search"><br><br>
         Enter the number of characters:<input type="text" placeholder="Enter no. of characters" ng-model="limit"><br><br>
         <table>
             <tr>
-                <th>Name</th>
-                <th>Date of availability</th>
-                <th>Location</th>
-                <th>Rating</th>
-                <th>Price(number)</th>
+                <th>Name
+                    <br>
+                    <input type="text" ng-model="search.name" placeholder="Search name">
+                </th>
+                <th>Date of availability
+                    <br>
+                    <input type="text" ng-model="search.doa" placeholder="Search availability">
+                </th>
+                <th>Location
+                    <br>
+                    <input type="text" ng-model="search.location" placeholder="Search location">
+                </th>
+                <th>Rating
+                    <br>
+                    <input type="text" ng-model="search.rating" placeholder="Search rating">
+                </th>
+                <th>Price(number)
+                    <br>
+                    <input type="text" ng-model="search.price" placeholder="Search Price">
+                </th>
                 <th>Price(Currency)</th>
             </tr>
             <tbody>
