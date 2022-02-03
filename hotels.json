@@ -1,0 +1,18 @@
+{"hotels":[
+    {"id":1,"name":"Royal Hotels","location":"Bangalore","rating":5,"price":2500},
+    {"id":2,"name":"Rajwada Palace","location":"Nagpur","rating":5,"price":3500},
+    {"id":3,"name":"Hotel Ganges","location":"Varanasi","rating":3,"price":2000},
+    {"id":4,"name":"Om Shanti","location":"Shirdi","rating":3,"price":2500},
+    {"id":5,"name":"Prestige Hotels","location":"Mumbai","rating":5,"price":5500},
+    {"id":6,"name":"Hotel Taj","location":"Agra","rating":3,"price":7500},
+    {"id":7,"name":"Nawaabs","location":"Shimla","rating":4,"price":2500},
+    {"id":8,"name":"Hotel Shine","location":"Kashmir","rating":3.5,"price":3500},
+    {"id":9,"name":"Axita Hotels","location":"Pune","rating":2,"price":1500},
+    {"id":10,"name":"Raajdhani Livings","location":"Jaipur","rating":5,"price":4500},
+    {"id":11,"name":"Stanza Living","location":"Bangalore","rating":4,"price":3500},
+    {"id":12,"name":"Kareems Living","location":"Ladakh","rating":5,"price":6500},
+    {"id":13,"name":"Shekhawats Island","location":"Jaisalmer","rating":3,"price":4500},
+    {"id":14,"name":"Jagannath Hotels","location":"Puri","rating":3,"price":3500},
+    {"id":15,"name":"Aloof Stays","location":"Nagpur","rating":2,"price":2500},
+    {"id":16,"name":"Cube Stay","location":"Akola","rating":1,"price":500}
+]}
