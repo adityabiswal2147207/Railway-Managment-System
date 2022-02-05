@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gateways</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("christ.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            background-color: cornflowerblue;
+            height: 70px;
+            display: flexbox;
+        }
+
+        header .navbar {
+            display: flexbox;
+        }
+
+        header .navbar ul {
+            display: flex;
+        }
+
+        header .navbar ul li {
+            display: flex;
+            list-style: none;
+        }
+
+        header .navbar ul li {
+            text-decoration: none;
+            list-style: none;
+        }
+
+        header .navbar ul li a {
+            text-decoration: none;
+            list-style: none;
+            color: white;
+            padding: 20px;
+            font-size: 3vh;
+        }
+
+        header .navbar ul li a:hover {
+            background-color: wheat;
+            color: black;
+        }
+
+        #student {
+            margin-left: 90px;
+            background-color: chartreuse;
+        }
+
+        #student a {
+            color: black;
+        }
+
+        section {
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            width: 50%;
+            margin-top: 100px;
+            margin-left: 25%;
+            padding: 20px;
+            font-size: 3vh;
+            border-radius: 10px;
+        }
+        section input{
+            width: 600px;
+            height: 30px;
+            border-radius: 20px;
+        }
+        section input::placeholder{
+            font-size: 2vh;
+            justify-content: center;
+            text-align: center;
+        }
+        #submit{
+            background-color: greenyellow;
+            height: 50px;
+        }
+        #reset{
+            background-color: yellow;
+            height: 50px;
+        }
+        table{
+            background-color: white;
+            color: black;
+            border:1px solid black;
+            margin-top: 60px;
+            margin-left: 20%;
+        }
+
+        th{
+            border: 1px solid black;
+        }
+        tr{
+            border:1px solid black;
+        }
+        td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body onload="checkCookie()">
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Registration</a></li>
+                <li id="student" onclick="loadxmldoc()"><a href="#">Get student details</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <form action="">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <br>
+                <input type="text" id="name" placeholder="Enter your full name"
+                    oninput="this.value = this.value.replace(/[^a-zA-Z.]/g, '').replace(/(\..*)\./g, '$1')">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <br>
+                <input type="text" id="email" placeholder="Enter your christ email id">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="branch">Branch:</label>
+                <br>
+                <input type="text" id="branch" placeholder="Enter your branch">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="college">College/University:</label>
+                <br>
+                <input type="text" id="college" placeholder="Enter your college/university">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <br>
+                <input type="text" id="state" placeholder="Enter your state">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <br>
+                <input type="text" id="address" placeholder="Enter your full address">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="age">Please select your age:</label>
+                <br>
+                <select name="age" id="age">
+                    <option value="select">Select</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile No:</label>
+                <br>
+                <input type="number" id="mobile" placeholder="Enter your mobile number:">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <br>
+                <input type="text" id="username" placeholder="Enter your username">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <br>
+                <input type="password" id="password" placeholder="Enter your password">
+                <span></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" id="submit" onclick="alert()">
+                <br>
+                <br>
+                <input type="reset" id="reset">
+            </div>
+
+        </form>
+    </section>
+
+    <table id="demo">
+
+    </table>
+</body>
+
+</html>
+<script>
+    var username = document.getElementById("username");
+    var email = document.getElementById("email");
+    var mobile = document.getElementById("mobile");
+    var password = document.getElementById("password");
+    var span = document.getElementsByTagName("span")
+
+    email.onkeydown = function () {
+        const regex1 = /^([a-z0-9\.-]+)@([christuniversity]+)\.([a-z]{1,8})$/;
+        if (regex1.test(email.value)) {
+            span[1].innerText = "Your email is a valid email";
+            span[1].style.color = "green";
+        }
+        else {
+            span[1].innerText = "Your email is invalid one";
+            span[1].style.color = "red";
+        }
+    }
+    mobile.onkeydown = function () {
+        const regex2 = /^[0-9]{9}$/;
+        if (regex2.test(mobile.value)) {
+            span[6].innerText = "Your mobile number is valid";
+            span[6].style.color = "green";
+        }
+        else {
+            span[6].innerText = "Your mobile number is invalid, check the number of digits";
+            span[6].style.color = "red";
+        }
+    }
+    username.onkeydown = function () {
+        const regex3 = /^[a-zA-Z]{1,}$/;
+        if (regex3.test(username.value)) {
+            span[7].innerText = "Your username is a valid one";
+            span[7].style.color = "green";
+        }
+        else {
+            span[7].innerText = "Your username is an invalid one";
+            span[7].style.color = "red";
+        }
+    }
+    password.onkeydown = function () {
+        const regex4 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+        if (regex4.test(password.value)) {
+            span[8].innertext = "Your password is now valid";
+            span[8].style.color = "green";
+        }
+        else {
+            span[8].innerText = "Your password is invalid suggestions:- Adity@199!,Yash@988989!";
+            span[8].style.color = "red";
+        }
+    }
+
+
+    function loadxmldoc(){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200){
+                    myFunction(this);
+                }
+            };
+            xmlhttp.open("GET","cat2.xml",true);
+            xmlhttp.send();
+        }
+
+        function myFunction(xml){
+            var x, i, xmlDoc, table;
+            xmlDoc = xml.responseXML;
+            table = "<tr><th>place</th><th>price</th></tr>";
+            x = xmlDoc.getElementsByTagName("COMPUTER-SCIENCE")
+            for (i = 0; i < x.length; i++){
+                table += "<tr><td>"+
+                    x[i].getElementsByTagName("stu-name")[0].childNodes[0].nodeValue + "</td><td>"+ 
+                    x[i].getElementsByTagName("stu-university")[0].childNodes[0].nodeValue + "</td></tr>" +
+                    x[i].getElementsByTagName("stu-phone")[0].childNodes[0].nodeValue + "</td></tr>"+
+                    x[i].getElementsByTagName("stu-email")[0].childNodes[0].nodeValue + "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+
+
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            let user = getCookie("username");
+            if (user != "") {
+                alert("Welcome again " + user);
+            } else {
+                user = prompt("Please enter your good name:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 30);
+                }
+            }
+        }
+
+
+</script>
