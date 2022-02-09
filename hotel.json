@@ -1,0 +1,7 @@
+{"hotel":[
+    {"name":"Royal Hotels","location":"Bangalore","rating":5,"price":3000},
+    {"name":"Madras Residency","location":"Chennai","rating":4,"price":2500},
+    {"name":"Kerala Shine Hotel","location":"Kerala","rating":3.5,"price":2500},
+    {"name":"Puri Dilemma","location":"Puri","rating":3,"price":1500},
+    {"name":"Shimla Heights","location":"Shimla","rating":4.5,"price":3000}
+]}
